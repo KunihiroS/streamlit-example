@@ -18,6 +18,11 @@ In the meantime, below is an example of what you can do with just a few lines of
 user_input = st.text_input("入力してください")
 st.write("入力: ", user_input)
 
+if st.checkbox("Show/hide"):
+    st.write("Checkbox is checked")
+
+option = st.radio("Choose an option", ["Option 1", "Option 2", "Option 3"])
+st.write("You selected: ", option)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 5000)
