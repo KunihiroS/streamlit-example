@@ -4,6 +4,7 @@ import math
 import pandas as pd
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
 
 """
 # Welcome to Streamlit!
@@ -30,6 +31,11 @@ df = pd.DataFrame(
     columns=['a', 'b', 'c', 'd', 'e']
 )
 st.dataframe(df)
+
+
+fig, ax = plt.subplots()
+ax.scatter(df['a'], df['b'])
+st.pyplot(fig)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 5000)
