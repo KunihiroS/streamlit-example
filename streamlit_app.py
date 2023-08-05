@@ -15,8 +15,8 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-user_input = st.text_input("Enter some text")
-st.write("You entered: ", user_input)
+user_input = st.text_input("入力してください")
+st.write("入力: ", user_input)
 
 
 with st.echo(code_location='below'):
