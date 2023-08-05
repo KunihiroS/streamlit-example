@@ -3,6 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
+import numpy as np
 
 """
 # Welcome to Streamlit!
@@ -23,6 +24,12 @@ if st.checkbox("Show/hide"):
 
 option = st.radio("Choose an option", ["Option 1", "Option 2", "Option 3"])
 st.write("You selected: ", option)
+
+df = pd.DataFrame(
+    np.random.rand(100, 5),
+    columns=['a', 'b', 'c', 'd', 'e']
+)
+st.dataframe(df)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 5000)
