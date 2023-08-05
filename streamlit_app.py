@@ -34,7 +34,7 @@ st.dataframe(df)
 
 
 fig, ax = plt.subplots()
-ax.scatter(df['a'], df['b'])
+ax.scatter(df['a'], df['d'])
 st.pyplot(fig)
 
 with st.echo(code_location='below'):
